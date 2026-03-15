@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <link href="images/392894eec_logo.png" rel="icon" type="image/svg+xml">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://unpluggeduniversity.base44.app/manifest.json" rel="manifest">
+  <title>
+   Unplugged University
+  </title>
+  <script crossorigin="" src="js/index-CsLRxOJf.js" type="module">
+  </script>
+  <link crossorigin="" href="css/index-BCJ2W7by.css" rel="stylesheet">
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "69b5de80474f4e54b5af6439";
+    if (!appId) return;
+    fetch(`/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="Unplugged University" property="og:title">
+  <meta content="A premium, distraction-free community for entrepreneurs and high-performers, dedicated to mastering wealth, real-world business skills, and self-mastery." property="og:description">
+  <meta content="images/392894eec_logo_1.png" property="og:image">
+  <meta content="https://unpluggeduniversity.base44.app" property="og:url">
+  <meta content="website" property="og:type">
+  <meta content="Unplugged University" property="og:site_name">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="Unplugged University" name="twitter:title">
+  <meta content="A premium, distraction-free community for entrepreneurs and high-performers, dedicated to mastering wealth, real-world business skills, and self-mastery." name="twitter:description">
+  <meta content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/69b5de80474f4e54b5af6439/392894eec_logo.png?width=1200&height=630&resize=contain" name="twitter:image">
+  <meta content="https://unpluggeduniversity.base44.app" name="twitter:url">
+  <meta content="A premium, distraction-free community for entrepreneurs and high-performers, dedicated to mastering wealth, real-world business skills, and self-mastery." name="description">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="Unplugged University" name="apple-mobile-web-app-title">
+  <meta content="noindex, nofollow" name="robots">
+  <script async="true" data-app-id="69b5de80474f4e54b5af6439" data-platform-url="https://app.base44.com" src="js/badge.js">
+  </script>
+ </head>
+ <body>
+  <div id="root">
+  </div>
+ 
+
+</body></html>
